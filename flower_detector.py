@@ -6,8 +6,8 @@ import cv2
 import os
 
 ######## ENTER PARAMETERS HERE ##########
-IMAGE_PATH = "tares-lentils.jpg" # path to the input image
-SAVE_NAME = "exB_hsv.jpg" # save name for output
+IMAGE_PATH = "tares-lentils_brighter.jpg" # path to the input image
+SAVE_NAME = "exB_hsv_bright.jpg" # save name for output
 SLIDERS = False # toggle the slider adjustment for thresholds
 TOTAL_COUNT = 0
 #########################################
@@ -30,6 +30,7 @@ cv2.namedWindow("Output", cv2.WINDOW_AUTOSIZE)
 segmentationWindow = 'Segmentation Params'
 cv2.namedWindow(segmentationWindow)
 create_trackbars(segmentationWindow, paramsDict)
+cv2.waitKey(10000)
 
 # read the image, resize
 image = cv2.imread(IMAGE_PATH)
